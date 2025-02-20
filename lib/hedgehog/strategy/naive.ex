@@ -30,15 +30,4 @@ defmodule Hedgehog.Strategy.Naive do
     |> String.upcase()
     |> Trader.get_positions()
   end
-
-  # def get_all_positions() do
-  #   CryptoEnum.cryptoList()
-  #   |> Enum.map(fn symbol ->
-  #     case get_positions(symbol) do
-  #       {:ok, positions} -> positions
-  #       {:error, reason} ->
-  #         IO.puts("Error fetching positions for #{symbol}: #{reason}")
-  #     end
-  #   end)
-  # end
 end

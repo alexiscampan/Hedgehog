@@ -19,11 +19,11 @@ config :hedgehog,
   strategy: [
     naive: [
       defaults: %{
-        chunks: 3,
-        budget: 30,
+        chunks: 5,
+        budget: 60,
         buy_down_interval: "0.0001",
         profit_interval: "-0.0012",
-        rebuy_interval: "0.01"
+        rebuy_interval: "0.001"
       }
     ]
   ]

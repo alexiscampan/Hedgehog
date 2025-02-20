@@ -17,27 +17,6 @@ config :hedgehog, Hedgehog.Repo,
 config :chartkick,
   json_serializer: Jason
 
-config :hedgehog,
-  binance_client: Binance,
-  ecto_repos: [Hedgehog.Repo],
-  generators: [timestamp_type: :utc_datetime],
-  # exchanges: [
-  #   binance_mock: [
-  #     use_cached_exchange_info: true
-  #   ]
-  # ],
-  strategy: [
-    naive: [
-      defaults: %{
-        chunks: 5,
-        budget: 20,
-        buy_down_interval: "0.00001",
-        profit_interval: "-0.00012",
-        rebuy_interval: "0.0001"
-      }
-    ]
-  ]
-
 # Configures the endpoint
 config :hedgehog, HedgehogWeb.Endpoint,
   url: [host: "localhost"],
